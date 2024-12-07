@@ -8,8 +8,8 @@ require("dotenv").config();
 
 (async () => {
   const server = Hapi.server({
-    port: port,
-    host: host,
+    port: port || 8080,
+    host: host || "0.0.0.0",
     routes: {
       cors: {
         origin: ["*"],
